@@ -11,11 +11,11 @@ import dataRouter from './routes/data.js';
 
 const corsOptions = {
   origin: [ 'http://localhost:3000',
-          'http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/',
+          'http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com',
   ],
 }
 
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 //app.use(authMiddleware)
 app.use(express.urlencoded({ extended: false }))
