@@ -6,6 +6,9 @@ const DBUrl = process.env.DBUrl;
 let db = null;
 
 MongoClient.connect(DBUrl, { useUnifiedTopology: true }, function (err, client) {
+	if (err) {
+		console.error(err);
+	}
 	// connect to database
 	db = client.db('bankdaldb');
 });
