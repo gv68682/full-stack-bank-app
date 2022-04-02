@@ -10,7 +10,9 @@ import dataRouter from './routes/data.js';
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: [ 'http://localhost:3000',
+          'http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/',
+  ],
 }
 
 app.use(cors(corsOptions))
@@ -28,5 +30,5 @@ app.get('*', (req, res) => {
 
 
 const port = process.env.PORT || 3001
-app.listen(port)
+app.listen(port, () => console.log(`Server listening on port ${port}`))
 //app.listen(3001, () => console.log('Server listening on port 3001'))
