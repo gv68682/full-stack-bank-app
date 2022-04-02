@@ -4,7 +4,7 @@ const token = localStorage.getItem('token')
 
 let baseURL =  process.env.backendurl  //http://localhost:3001'
 if (!process.env.backendurl) {
-  baseURL = 'https://fullstack-bank-backend.herokuapp.com'
+  baseURL = 'http://fullstack-bank-backend.herokuapp.com'
 }
 let service = axios.create({
   baseURL,
