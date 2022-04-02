@@ -24,9 +24,9 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/auth', authRouter);
 app.use('/data', authMiddleware, dataRouter);
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(path.resolve(), 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(path.resolve(), 'index.html'));
+// });
 
 
 const port = process.env.PORT || 3001
