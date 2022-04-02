@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const token = localStorage.getItem('token')
 
-const baseURL = 'http://localhost:3001'
+const baseURL =  process.env.backendurl  //http://localhost:3001'
 let service = axios.create({
   baseURL,
   headers: {
