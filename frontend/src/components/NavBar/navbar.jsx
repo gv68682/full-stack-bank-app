@@ -15,7 +15,7 @@ const Container = styled.nav`
 const Logo = styled.img`
   padding: 16px;
   padding-left: 25px;
-  width: 82px;
+  width: 75px;
 `;
 const List = styled.ul`
   list-style-type: none;
