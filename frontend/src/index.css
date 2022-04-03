@@ -17,7 +17,8 @@ code {
   flex-direction: row;
   /* align-items: left; */
   height: 100vh;
-  background-color: black;
+  background-color: white;
+  /* #c4aead */
 }
 
 .navbar {

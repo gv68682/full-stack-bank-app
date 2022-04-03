@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 
+
+//#383838  #dc3545  #a31f34
 const Container = styled.nav`
-  background-color: white;
-  width: 180px;
+  background-color: #a31f34 ;
+  width: 160px;
   align-self: stretch;
 `;
 const Logo = styled.img`
@@ -25,18 +27,18 @@ const Item = styled.li`
   padding: 16px 24px;
   a {
     :hover {
-      color: ${(props) =>  (props.active ? "white" : "#dc3545")} !important;
+      color: ${(props) =>  (props.active ? "black" : "black")} !important;
       transform: translate(0%, -2%);
       transition: color 0.5s;
       font-weight: 600;
     }
     text-decoration: none;
     color: ${(props) => {
-      return props.active ? "white" : "black";
+      return props.active ? "black" : "white";
     }};
-    font-weight: ${(props) => (props.active ? "bold" : "normal")};
+    font-weight: ${(props) => (props.active ? "normal" : "normal")};
   }
-  background-color: ${(props) =>  (props.active ? "#dc3545" : "white")}
+  background-color: ${(props) =>  (props.active ? "white" : "#a31f34")}
 `;
 
 const NavBar = (props) => {
@@ -54,10 +56,10 @@ const NavBar = (props) => {
         {auth ? (
           <>
             <Item>
-              <div style={{ color: "#dc3545" }}>{`Welcome ${auth.name}!`}</div>
+              <div style={{ color: "white" }}>{`Welcome ${auth.name}!`}</div>
             </Item>
             <Item>
-              <span style={{ color: "#dc3545" }}>{userInfo.email}</span>
+              <span style={{ color: "white" }}>{userInfo.email}</span>
             </Item>
             <Item active={location.pathname === '/deposit'}>
               <Link to="deposit">Deposit</Link>

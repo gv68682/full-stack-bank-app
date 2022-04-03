@@ -1,6 +1,6 @@
 import {useContext, useState} from 'react';
 import styled from 'styled-components'
-import logo from '../../NavBar/logo2.JPG'
+import logo from '../../NavBar/logo.JPG'
 
 import * as Yup from 'yup'
 import { Formik, Form } from 'formik'
@@ -87,7 +87,7 @@ export const Login = () => {
                 <div style={{color: 'white'}}>{status}</div>
                 <div> 
                   <br/>
-                  <span style={{color: 'white'}}> Do not have an account?</span>
+                  <span style={{color: 'black'}}> Do not have an account?</span>
                   <span><a style={{color: '#dc3545'}} href = "http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/createAccount"> Sign-up</a> </span>
                 </div>
                

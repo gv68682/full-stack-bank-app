@@ -10,14 +10,14 @@ const UserContext = createContext(null);
 function MediaCard(props) {
   return (
     <>
-      <Card sx={{ maxWidth: 1100, maxHeight: 1000, display: 'flex', justifyContent: 'flex-start', columnGap: '0%', background: 'black' }} >
+      <Card sx={{ maxWidth: 1100, maxHeight: 1000, display: 'flex', justifyContent: 'flex-start', columnGap: '0%', background: '#f5f5f5' }} >
         <div style={{ display: 'flex', flexDirection: "column", flexGrow: 1, columnGap: '0%' }}>
           {/* <div style={{ width: '50%', height: '130%', justifyContent: 'center', borderColor: 'white', borderStyle: 'solid', borderWidth: '1px'}}> */}
             <CardContent sx={{ paddingLeft: '7px', flexGrow: 1, marginBottom: '5%' }}>
-              <Typography gutterBottom variant="h5" sx={{ color: 'white' }} component="div">
+              <Typography gutterBottom variant="h5" sx={{ color: 'black' }} component="div">
                 {props.header}
               </Typography>
-              <Typography variant="body2" gutterBottom variant="h6" color="text.secondary" sx={{ color: 'white' }} >
+              <Typography variant="body2" gutterBottom variant="h6" color="text.secondary" sx={{ color: 'black' }} >
                 {props.title}
               </Typography>
             </CardContent>
@@ -25,7 +25,7 @@ function MediaCard(props) {
               {console.log("Media card")}
               {props.actions}
             </CardActions>
-            <div style={{ color: 'white' }}>{props.status} </div>
+            <div style={{ color: 'black' }}>{props.status} </div>
             {props.link}
           {/* </div> */}
         </div>

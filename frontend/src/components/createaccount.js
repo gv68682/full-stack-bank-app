@@ -91,7 +91,7 @@ function CreateAccount() {
       link={
         <div>
           <br />
-          <span style={{ color: 'white' }}> Already have an account?</span>
+          <span style={{ color: 'black' }}> Already have an account?</span>
           <span><a style={{ color: '#dc3545' }} href="http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/login"> Log-in</a> </span>
         </div>
       }

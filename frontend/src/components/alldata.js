@@ -53,7 +53,7 @@ function AllData() {
       <h3 style={{ textAline: 'center', color: '#dc3545' }}>All Users Data</h3>
       <TableContainer component={Paper}>
         <Table sx={{}} aria-label="customized table">
-          <TableHead>
+          <TableHead >
             <TableRow>
               <StyledTableCell align="left">Id</StyledTableCell>
               <StyledTableCell align="left">Name</StyledTableCell>

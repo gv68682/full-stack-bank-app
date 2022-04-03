@@ -34,7 +34,6 @@ function NavLogin(){
     }
 
   async function handleSubmit(){
-    console.log(email,password);
     if (!validate(email,    'Email is mandatory!'))    return;
     if (!validate(email, 'email')) return;
     if (!validate(password, 'Password is mandatory!')) return;
