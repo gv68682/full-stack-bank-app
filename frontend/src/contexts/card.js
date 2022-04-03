@@ -22,7 +22,7 @@ function MediaCard(props) {
               </Typography>
             </CardContent>
             <CardActions sx={{ flexGrow: 2 }}>
-              {console.log("Media card")}
+              {/* {console.log("Media card")} */}
               {props.actions}
             </CardActions>
             <div style={{ color: 'black' }}>{props.status} </div>

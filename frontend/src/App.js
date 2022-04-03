@@ -25,7 +25,7 @@ const theme = createTheme({
         // Name of the slot
         root: {
           textTransform: 'none',
-          backgroundColor: '#dc3545',
+          backgroundColor: '#a31f34',
           color: 'white',
           fontWeight: '40px',
         },
@@ -33,7 +33,7 @@ const theme = createTheme({
     },
     MuiInputLabel: {
       styleOverrides: {
-        root: { color: '#dc3545', fontWeight: 'normal' },
+        root: { color: '#a31f34', fontWeight: 'normal' },
       },
     },
     MuiInput: {

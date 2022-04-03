@@ -23,7 +23,7 @@ const Container = styled.div`
   justify-content: center;
 `
 const Logo = styled.img`
-  width: 55px;
+  width: 50px;
 `
 
 export const Login = () => {
@@ -88,7 +88,7 @@ export const Login = () => {
                 <div> 
                   <br/>
                   <span style={{color: 'black'}}> Do not have an account?</span>
-                  <span><a style={{color: '#dc3545'}} href = "http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/createAccount"> Sign-up</a> </span>
+                  <span><a style={{color: '#a31f34'}} href = "http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/createAccount"> Sign-up</a> </span>
                 </div>
                
               </Form>

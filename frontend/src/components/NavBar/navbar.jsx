@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "./logo.JPG";
+import logo from "./n_logo3.JPG";
 import { AuthContext } from "../../contexts/Auth/authContext";
 import { useContext } from "react";
 import { useLocation } from "react-router";
@@ -15,7 +15,7 @@ const Container = styled.nav`
 const Logo = styled.img`
   padding: 16px;
   padding-left: 25px;
-  width: 75px;
+  width: 80px;
 `;
 const List = styled.ul`
   list-style-type: none;
@@ -27,10 +27,10 @@ const Item = styled.li`
   padding: 16px 24px;
   a {
     :hover {
-      color: ${(props) =>  (props.active ? "black" : "black")} !important;
+      color: ${(props) =>  (props.active ? "black" : "white")} !important;
       transform: translate(0%, -2%);
       transition: color 0.5s;
-      font-weight: 600;
+      font-weight: 620;
     }
     text-decoration: none;
     color: ${(props) => {

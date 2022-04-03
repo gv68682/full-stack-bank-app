@@ -6,7 +6,8 @@ import { bankAPI } from '../services';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button'
 import { InputLabel } from '@mui/material';
-import imge_s from './images/b_signup_s.JPG'
+import imge from './images/n_withdraw11.JPG'
+import imge_s from './images/n_success.JPG'
 
 
 function Withdraw() {
@@ -72,6 +73,13 @@ function Withdraw() {
       header="Withdraw"
       title={`Account Balance: ${userInfo.balance} `}
       status={status}
+       media={
+        <CardMedia
+          component="img"
+          image={imge}
+          sx={{ width: '25%', height: '25%', paddingTop: '3%', paddingRight: '8%' }}
+          alt="Withdraw page" />
+      }
       actions={
         <div>
           <InputLabel>Withdraw Amount </InputLabel>
@@ -84,13 +92,13 @@ function Withdraw() {
 
     return <MediaCard
       header="Success"
-      title={`Latest Account Balance: ${userInfo.balance} `}
+      title={`Account Balance: ${userInfo.balance} `}
       media={
         <CardMedia
           component="img"
           image={imge_s}
-          sx={{ flexGrow: 0, flexBasis: 0 }}
-          alt="Withdraw page" />
+          sx={{ width: '20%', height: '20%', paddingTop: '3%', paddingRight: '8%' }}
+          alt="Success page" />
       }
       actions={
         <div>

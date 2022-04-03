@@ -6,8 +6,8 @@ import { bankAPI } from '../services';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button'
 import { InputLabel } from '@mui/material';
-import imge from './images/b_deposit.JPG'
-
+import imge from './images/n_deposit1.JPG'
+import imge_s from './images/n_success.JPG'
 
 
 function Deposit() {
@@ -69,7 +69,7 @@ function Deposit() {
           component="img"
           image={imge}
           // sx={{ flexGrow: 1, flexBasis: 0 }}
-          sx={{ width: '45%', height: '35%', paddingTop: '1%', paddingRight: '5%' }}
+          sx={{ width: '25%', height: '25%', paddingTop: '5%', paddingRight: '8%' }}
           alt="Deposit page" />
       }
       actions={
@@ -84,7 +84,14 @@ function Deposit() {
 
     return <MediaCard
       header="Success"
-      title={`Latest Account Balance: ${userInfo.balance} `}
+      title={`Account Balance: ${userInfo.balance} `}
+      media={
+        <CardMedia
+          component="img"
+          image={imge_s}
+          sx={{ width: '20%', height: '20%', paddingTop: '3%', paddingRight: '8%' }}
+          alt="Success page" />
+      }
       actions={
         <div>
           <Button variant='contained' type="submit" onClick={clearForm}>Want to deposit more?</Button>

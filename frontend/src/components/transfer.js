@@ -7,6 +7,9 @@ import { bankAPI } from '../services';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import CardMedia from '@mui/material/CardMedia';
+import imge from './images/n_transfer2.JPG'
+import imge_s from './images/n_success.JPG'
 
 
 function Transfer() {
@@ -105,11 +108,19 @@ function Transfer() {
             header="Transfer"
             title={`Account Balance: ${userInfo.balance} `}
             status={status}
+            media={
+                <CardMedia
+                  component="img"
+                  image={imge}
+                  // sx={{ flexGrow: 1, flexBasis: 0 }}
+                  sx={{ width: '25%', height: '25%', paddingTop: '5%', paddingRight: '8%' }}
+                  alt="Deposit page" />
+              }
             actions={
                 <div>
                     <div>
                         <FormControl fullWidth>
-                            <div style={{ color: '#dc3545', paddingBottom: '25px' }}> Select Account to Transfer </div>
+                            <div style={{ color: '#a31f34', paddingBottom: '25px' }}> Select Account to Transfer </div>
                             <InputLabel id="demo-simple-select-label" sx={{ paddingBottom: '10px' }} ></InputLabel>
                             <Select
                                 labelId="demo-simple-select-label"
@@ -124,7 +135,7 @@ function Transfer() {
                             </Select>
                         </FormControl>
                     </div>
-                    <InputLabel sx={{ paddingTop: '30px' }}>Transfer Amount </InputLabel>
+                    <InputLabel sx={{ paddingTop: '30px'}}>Transfer Amount </InputLabel>
                     <input type="number" className="form-control" id="name" placeholder="Enter Amount" value={transferAmount} onChange={e => setTransferAmount(e.currentTarget.value)} /><br />
                     <Button variant='contained' type="submit" color='primary' onClick={handleTransfer}>Transfer Now</Button>
                 </div>
@@ -134,10 +145,17 @@ function Transfer() {
 
         return <MediaCard
             header="Success"
-            title={`Latest Account Balance: ${userInfo.balance} `}
+            title={`Account Balance: ${userInfo.balance} `}
+            media={
+                <CardMedia
+                  component="img"
+                  image={imge_s}
+                  sx={{ width: '20%', height: '20%', paddingTop: '3%', paddingRight: '8%' }}
+                  alt="Success page" />
+            }
             actions={
                 <div>
-                    <Button variant='contained' type="submit" onClick={clearForm}>Want to transfer amount again?</Button>
+                    <Button variant='contained' type="submit" onClick={clearForm}>Want to transfer again?</Button>
                 </div>
             }
         />

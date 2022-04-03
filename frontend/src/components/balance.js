@@ -55,7 +55,7 @@ function Balance() {
         <CardMedia
           component="img"
           image={imge}
-          sx={{ flexGrow: 1, flexBasis: 0 , width: '40%', height: '30%', paddingTop: '3%'}}
+          sx={{ flexGrow: 1, flexBasis: 0 , width: '40%', height: '30%', paddingTop: '3%',paddingRight: '5%'}}
           alt="Balance page" />
       }
       actions={

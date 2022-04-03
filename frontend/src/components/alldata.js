@@ -23,7 +23,7 @@ function AllData() {
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
+      backgroundColor: '#a31f34',
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -50,7 +50,7 @@ function AllData() {
   </StyledTableRow >))
   return (
     <>
-      <h3 style={{ textAline: 'center', color: '#dc3545' }}>All Users Data</h3>
+      <h3 style={{ textAline: 'center', color: 'black' }}>All Users Data</h3>
       <TableContainer component={Paper}>
         <Table sx={{}} aria-label="customized table">
           <TableHead >
