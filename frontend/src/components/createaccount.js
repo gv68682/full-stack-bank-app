@@ -5,7 +5,7 @@ import { MediaCard } from '../contexts/card';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button'
 import { InputLabel } from '@mui/material';
-import imge_s from './images/b_signup_s.JPG'
+import imge from './images/n_home2.JPG'
 
 function CreateAccount() {
   const [show, setShow] = useState(true);
@@ -76,6 +76,13 @@ function CreateAccount() {
     return <MediaCard
       header="Create Account"
       status={status}
+      // media={
+      //   <CardMedia
+      //     component="img"
+      //     image={imge}
+      //     sx={{ width: '20%', height: '20%', paddingTop: '3%', paddingRight: '8%' }}
+      //     alt="Success page" />
+      // }
       actions={
         <div>
           <InputLabel>Name </InputLabel>
@@ -89,10 +96,11 @@ function CreateAccount() {
       }
 
       link={
-        <div>
+        <div style={{ paddingBottom: '25px' }}>
           <br />
-          <span style={{ color: 'black' }}> Already have an account?</span>
+          <span style={{ color: 'black', paddingLeft: '8px' }}> Already have an account?</span>
           <span><a style={{ color: '#a31f34' }} href="http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/login"> Log-in</a> </span>
+          {/* http://localhost:3000/login*/}
         </div>
       }
     />
@@ -101,13 +109,6 @@ function CreateAccount() {
     return <MediaCard
       header="Success"
       title="Created new account"
-      media={
-        <CardMedia
-          component="img"
-          image={imge_s}
-          sx={{ flexGrow: 0, flexBasis: 0 }}
-          alt="green iguana" />
-      }
       actions={
         <div>
           <Button variant='contained' type="submit" onClick={clearForm}>Add another account</Button>

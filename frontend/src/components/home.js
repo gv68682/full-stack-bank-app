@@ -1,6 +1,7 @@
 import {MediaCard } from '../contexts/card';
 import CardMedia from '@mui/material/CardMedia';
-import imge from './images/n_home2.JPG'
+import imge from './NavBar/n_logo3.JPG'
+
 function Home(){
   return (
     <> 

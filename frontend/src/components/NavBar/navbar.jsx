@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "./n_logo3.JPG";
+import logo from "./n_logo8.JPG";
 import { AuthContext } from "../../contexts/Auth/authContext";
 import { useContext } from "react";
 import { useLocation } from "react-router";
@@ -15,7 +15,7 @@ const Container = styled.nav`
 const Logo = styled.img`
   padding: 16px;
   padding-left: 25px;
-  width: 80px;
+  width: 86px;
 `;
 const List = styled.ul`
   list-style-type: none;

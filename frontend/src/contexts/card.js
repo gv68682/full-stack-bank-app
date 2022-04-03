@@ -25,7 +25,7 @@ function MediaCard(props) {
               {/* {console.log("Media card")} */}
               {props.actions}
             </CardActions>
-            <div style={{ color: 'black' }}>{props.status} </div>
+            <div style={{ color: 'black', paddingLeft: '8px' }}>{props.status} </div>
             {props.link}
           {/* </div> */}
         </div>

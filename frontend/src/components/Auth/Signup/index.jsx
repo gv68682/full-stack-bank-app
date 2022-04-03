@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
-import logo from '../../NavBar/logo2.JPG'
+import logo from '../../NavBar/n_logo8.JPG'
 
 import * as Yup from 'yup'
 import { Formik, Form } from 'formik'

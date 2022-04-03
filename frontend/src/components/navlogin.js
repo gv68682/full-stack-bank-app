@@ -5,8 +5,7 @@ import { MediaCard } from '../contexts/card';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button'
 import { InputLabel } from '@mui/material';
-import imge from './images/b_login.JPG'
-import imge_s from './images/b_signup_s.JPG'
+import imge from './images/n_login.JPG';
 
 function NavLogin(){
 
@@ -53,7 +52,7 @@ if(!auth) {
       <CardMedia
         component="img"
         image={imge}
-        sx={{flexGrow: 0, flexBasis: 0, width: '60%', height: '50%', paddingTop: '1%'}}
+        sx={{ width: '25%', height: '30%', paddingTop: '3%', paddingRight: '10%' }}
         alt="Login page"/>
     }
     actions={
@@ -71,14 +70,6 @@ if(!auth) {
   } else {
 
     return <MediaCard
-        header="You are already logged in!!!"
-        media={
-            <CardMedia
-              component="img"
-              image={imge_s}
-              sx={{flexGrow: 1, flexBasis: 0}}
-              alt="Login page"/>
-        }
     />
   }
 }
