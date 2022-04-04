@@ -97,7 +97,7 @@ function Withdraw() {
         <CardMedia
           component="img"
           image={imge_s}
-          sx={{ width: '20%', height: '20%', paddingTop: '3%', paddingRight: '8%' }}
+          sx={{ width: '18%', height: '18%', paddingTop: '3%', paddingRight: '8%' }}
           alt="Success page" />
       }
       actions={

@@ -5,7 +5,7 @@ Client, Server, and Database
 
 http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/
 
-<img src='frontend/src/components/images/bestbank.JPG' width="800">
+<img src='frontend/src/components/images/r_bestbank.JPG' width="800">
 
 
 ## Description/Motivation: 
@@ -60,14 +60,14 @@ Implemented money transfer between the accounts, and admin user privilege, who c
 ## Future improvements:
 Create checking and savings accounts. Calculate interest rate, and pay bills.
 
-#### Login page
-<img src='frontend/src/components/images/r_login.JPG' width="800">
+#### Signup page
+<img src='frontend/src/components/images/r_signup.JPG' width="800">
 
 #### After signin
 <img src='frontend/src/components/images/r_afterlogin.JPG' width="800">
 
 #### Deposit
-<img src='frontend/src/components/images/r_deposit.JPG' width="800">
+<img src='frontend/src/components/images/r_withdraw.JPG' width="800">
 
 #### Transfer
 <img src='frontend/src/components/images/r_transfer.JPG' width="800">

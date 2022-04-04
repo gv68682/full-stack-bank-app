@@ -89,7 +89,7 @@ export const Login = () => {
                   <br/>
                   <span style={{color: 'black'}}> Do not have an account?</span>
                   <span><a style={{color: '#a31f34'}} href = "http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/createAccount"> Sign-up</a> </span>
-                  {/* http://localhost:3000/createAccount */}
+                  {/* http://localhost:3000/createAccount   http://padma-vel-full-stack-bank-app.s3-website-us-east-1.amazonaws.com/createAccount*/}
                 </div>
                
               </Form>

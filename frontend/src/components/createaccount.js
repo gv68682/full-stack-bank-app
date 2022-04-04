@@ -86,11 +86,11 @@ function CreateAccount() {
       actions={
         <div>
           <InputLabel>Name </InputLabel>
-          <input type="input" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br />
+          <input type="input" maxlength="6" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br />
           <InputLabel>Email Adress </InputLabel>
-          <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br />
+          <input type="input" maxlength="15" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br />
           <InputLabel>Password </InputLabel>
-          <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br />
+          <input type="password" maxLength = "10" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br />
           <Button variant='contained' type="submit" color='primary' disabled={!validation} onClick={handleCreate}>Create Account</Button>
         </div>
       }
