@@ -69,7 +69,7 @@ function update(id, balance1) {
 			.collection('users')
 			.findOneAndUpdate(
 				{ _id: o_id },
-				{ $set: {balance: balance1} } ,
+				{ $set: {balance: balance1, updated_at: new Date() } } ,
 				// { returnOriginal: false },
 				function (err, documents) {
 					err ? reject(err) : resolve(documents);
