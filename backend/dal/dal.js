@@ -17,7 +17,7 @@ MongoClient.connect(DBUrl, { useUnifiedTopology: true }, function (err, client) 
  function create(name, email, password) {
 	return new Promise((resolve, reject) => {
 		const collection = db.collection('users');
-		const doc = { name, email, password, balance: 0 };
+		const doc = { name, email, password, balance: 0, created_at: new Date() };
 		collection.insertOne(doc, { w: 1 }, function (err, result) {
 			err ? reject(err) : resolve(doc);
 		});
