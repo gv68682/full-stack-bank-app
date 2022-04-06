@@ -16,7 +16,7 @@ app.post('/signup', function (req, res) {
 	find(req.body.email).
 		then((users) => {
 			if (users.length > 0) {
-				res.send('User already exists');
+				res.status(401).json('User already exists!')
 			}
 			else {
 				// else create user with hashed pwd
