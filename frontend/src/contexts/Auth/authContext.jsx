@@ -56,6 +56,9 @@ export const AuthProvider = ({ children }) => {
       //const userCredential = await axios.post('auth/signup', { email, password })
       const userCredential = await bankAPI.signup({name: name, email: email, password: password})
       //console.log('Res as token from SIGNUP request', userCredential)
+      if (userCredential.status !== 201) {
+        return false
+      }
       const user = jwt(userCredential.data);
       localStorage.setItem('token', userCredential.data);
       //console.log("stored token in local storage")

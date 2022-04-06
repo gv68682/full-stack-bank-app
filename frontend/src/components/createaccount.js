@@ -17,17 +17,28 @@ function CreateAccount() {
 
   const { auth } = useContext(AuthContext);
   const { signup } = useContext(AuthContext);
-  const {userInfo} = useContext(AuthContext);
+  const { userInfo } = useContext(AuthContext);
 
 
   function validate(field, label) {
 
-    if (field && label == 'Email' && !field.includes('@')) {
+    if (!field) {
+      setStatus(label + '  is mandatory!');
+      return false;
+    }
+    if ((field && label == 'Email' && !field.includes('@'))) {
       setStatus('Error: Invalid email!!')
       return false;
     }
-    if (!field) {
-      setStatus( label + '  is mandatory!');
+    if ((field && label == 'Email' && field.substring(0, 1) === '@')) {
+      setStatus('Error: Invalid email!!')
+      return false;
+    }
+
+    let l = field.length;
+    let v = field.substring(l - 4, l)
+    if ((field && label == 'Email') && (v !== '.edu' && v !== '.com' && v !== '.org' && v !== '.net' && v !== '.biz')) {
+      setStatus('Error: Invalid email!!')
       return false;
     }
     return true;
@@ -47,10 +58,10 @@ function CreateAccount() {
       setTimeout(() => setStatus(''), 2000)
       return false;
     }
-      if (!validate(email, 'Email')) {
-        //setTimeout(() => setStatus(''), 4000)
-        return false;
-      }
+    // if (!validate(email, 'Email')) {
+    //   //setTimeout(() => setStatus(''), 4000)
+    //   return false;
+    // }
     pwdVal(password, true);
     if (name.length > 0 && email.length > 0 && password.length > 0) { setValidation(true); }
     else setValidation(false);
@@ -58,14 +69,19 @@ function CreateAccount() {
 
   useEffect(() => {
     formValidate();
-  }, [name, email, password]);
+  }, [name, password]);
 
-  function handleCreate() {
-    if (!validate(name, 'Name is mandatory!')) return;
-    if (!validate(email, 'Email is mandatory!')) return;
+  const handleCreate = async () => {
+    if (!validate(name, 'Name')) return;
+    if (!validate(email, 'Email')) return;
     if (!pwdVal(password)) return;
     setShow(false);
-    signup(name, email, password)
+    // signup(name, email, password)
+    if (await signup(name, email, password) === false) {
+      setStatus('User exists, try to login!');
+      setValidation(false);
+
+    }
     //console.log("about to go to authContext signup function")
   }
 
@@ -91,11 +107,11 @@ function CreateAccount() {
       actions={
         <div>
           <InputLabel>Name </InputLabel>
-          <input type="input" maxlength="6" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br />
+          <input type="input" maxLength="6" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br />
           <InputLabel>Email Adress </InputLabel>
-          <input type="input" maxlength="15" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br />
+          <input type="input" maxLength="15" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br />
           <InputLabel>Password </InputLabel>
-          <input type="password" maxLength = "10" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br />
+          <input type="password" maxLength="10" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br />
           <Button variant='contained' type="submit" color='primary' disabled={!validation} onClick={handleCreate}>Create Account</Button>
         </div>
       }
