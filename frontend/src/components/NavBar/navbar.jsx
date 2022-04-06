@@ -59,7 +59,7 @@ const NavBar = (props) => {
               <div style={{ color: "white" }}>{`Welcome ${auth.name}!`}</div>
             </Item>
             <Item>
-              <div style={{ color: "white" }}>{`${userInfo.email}`}</div>
+              <div style={{ color: "white", textOverflow: 'ellipsis', overflow: 'hidden' }}>{`${userInfo.email}`}</div>
             </Item>
             <Item active={location.pathname === '/deposit'}>
               <Link to="deposit">Deposit</Link>
