@@ -38,7 +38,7 @@ app.post('/signup', function (req, res) {
 									accessTokenSecret, // secret used to sign token
 									{ expiresIn: '60m' } //token details
 								)
-								res.status(200).json(accessToken);
+								res.status(201).json(accessToken);
 							}).catch((error) => {
 								//console.log("User Error from DB: ", error);
 								res.status(500).send('error');

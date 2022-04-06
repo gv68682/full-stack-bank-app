@@ -7,9 +7,12 @@ const DBUrl = process.env.DBUrl;
 
 
 const data = [
-  { name: 'abel', email: 'abel@mit.edu', password: 'secret', balance: 500 },
-  { name: 'anne', email: 'anne@mit.edu', password: 'secret', balance: 100 },
-  { name: 'don', email: 'don@mit.edu', password: 'secret', balance: 100 }
+  { name: 'Abel', email: 'abel@mit.edu', password: 'secret', balance: 100000 },
+  { name: 'Anne', email: 'anne@mit.edu', password: 'secret', balance: 1000 },
+  { name: 'Lilly', email: 'lilly@mit.edu', password: 'secret', balance: 100 },
+  { name: 'Tesla', email: 'tesla@mit.edu', password: '123123', balance: 100 },
+  { name: 'Robert', email: 'robert@gmail.com', password: '111111', balance: 100 },
+  { name: 'Rose', email: 'rose@mit.edu', password: '123123', balance: 100 }
 ]
 
 
@@ -28,7 +31,7 @@ MongoClient.connect(DBUrl, { useUnifiedTopology: true }, function (err, client) 
         if (err) {
           res.status(500).send(err);
         }
-        let hashUser = { name: user.name, email: user.email, password: hash , balance: user.balance};
+        let hashUser = { name: user.name, email: user.email, password: hash , balance: user.balance, created_at: new Date()};
         collection.insertOne(hashUser, { w: 1 }, (err, _) => {
           if (err) {
            // console.log('failed to add user: ', user);
