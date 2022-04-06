@@ -21,6 +21,11 @@ function CreateAccount() {
 
 
   function validate(field, label) {
+
+    if (field && label == 'Email' && !field.includes('@')) {
+      setStatus('Error: Invalid email!!')
+      return false;
+    }
     if (!field) {
       setStatus( label + '  is mandatory!');
       return false;
@@ -43,7 +48,7 @@ function CreateAccount() {
       return false;
     }
       if (!validate(email, 'Email')) {
-        setTimeout(() => setStatus(''), 4000)
+        //setTimeout(() => setStatus(''), 4000)
         return false;
       }
     pwdVal(password, true);

@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
         return false
       }
       //console.log('Res as token from LOGIN request', userCredential)
-      const user = jwt(userCredential.data);
+      const user = jwt(userCredential.data); //from token, get decoded user through jwt 
       localStorage.setItem('token', userCredential.data);
       //console.log('user login from authcontext: ', auth)
       bankAPI.updateServiceAuth();
