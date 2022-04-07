@@ -84,7 +84,7 @@ export const Login = () => {
                 >
                   Log in
                 </Button>
-                <div style={{color: 'black'}}>{status}</div>
+                <div style={{color: 'red'}}>{status}</div>
                 <div> 
                   <br/>
                   <span style={{color: 'black'}}> Do not have an account?</span>

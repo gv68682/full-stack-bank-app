@@ -74,7 +74,7 @@ const NavBar = (props) => {
               <Link to="transfer">Transfer</Link>
             </Item>
             <Item active={location.pathname === '/alldata'}>
-              {auth.name === 'abel' ? <Link to="alldata">All Data</Link> : <></> }
+              {auth.name === 'Abel' ? <Link to="alldata">All Data</Link> : <></> }
             </Item>
             <Item onClick={logout}>
               <Link to="/">Log Out</Link>
