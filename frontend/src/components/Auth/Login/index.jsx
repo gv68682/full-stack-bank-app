@@ -33,7 +33,7 @@ export const Login = () => {
   const handleSubmit = async (values) => {
     //login(values.email, values.password)
     if (await login(values.email, values.password) === false) {
-      setStatus('Wrong Credentials!')
+      setStatus('Wrong Credentials!!')
      
     }
   }
@@ -84,7 +84,7 @@ export const Login = () => {
                 >
                   Log in
                 </Button>
-                <div style={{color: 'white'}}>{status}</div>
+                <div style={{color: 'black'}}>{status}</div>
                 <div> 
                   <br/>
                   <span style={{color: 'black'}}> Do not have an account?</span>
