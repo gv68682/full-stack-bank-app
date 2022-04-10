@@ -21,6 +21,7 @@ It’s an amazing journey so far! This application provides an overview of 3 tie
  * Start front and back end servers in 2 terminals using npm start. 
  * First run seed.js from backend terminal, so some user data will be added to cluster(database) collection (table). 
  * Create a new account or login and then explore remaining features.
+ * To experience admin privileges use following credentials: Email - abel@mit.edu, Password - secret.
 
 <img src='frontend/src/components/images/r_folderStructure.JPG' width="300">
 
@@ -88,22 +89,4 @@ Create checking and savings accounts. Calculate interest rate, and pay bills.
 
 ### MIT License:
 
-Copyright (c) 2020 John Williams
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Licensed under the terms of the MIT LICENSE, free for educational purposes.

@@ -2,10 +2,8 @@ import axios from 'axios'
 
 const token = localStorage.getItem('token')
 
-let baseURL =  process.env.backendurl  //http://localhost:3001'
-if (!process.env.backendurl) {
-  baseURL = 'http://fullstack-bank-backend.herokuapp.com'
-}
+let baseURL =  process.env.REACT_APP_API_URL  //http://localhost:3001'
+
 let service = axios.create({
   baseURL,
   headers: {

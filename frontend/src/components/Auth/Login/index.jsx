@@ -41,7 +41,7 @@ export const Login = () => {
     <Container>
       <Logo src={logo} />
       <Formik
-        initialValues={{ email: 'abel@mit.edu', password: 'secret' }}
+        initialValues={{ email: '', password: '' }}
         validationSchema={userSchema}
         onSubmit={handleSubmit}
       >
